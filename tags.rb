@@ -10,7 +10,7 @@ module Jekyll
       self.process(name)
 
       self.read_yaml(File.join(base, '_layouts'), 'tag.html')
-      self.data['title'] = "Tag:#{tag}"
+      self.data['title'] = "#{tag}"
       self.data['posts'] = site.tags[tag]
       self.data['title_detail'] = 'タグ「' + tag + '」' + 'がつけられた記事'
     end
